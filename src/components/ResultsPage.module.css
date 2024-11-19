@@ -1,0 +1,36 @@
+.buttons{
+    width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.button{
+    width: 12vw;
+    height: 9vh;
+}
+.resultsMain{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+.hResults{
+    font-size: 25px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.btn{
+    color: white;
+    text-decoration: none;
+}
+.parentBtns{
+    display: flex;
+    gap: 140px;
+}
+.btnParent1{
+    margin-left: 500px;
+}
