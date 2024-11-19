@@ -147,12 +147,16 @@
     transition: all 0.3s ease-in-out; 
     width: 300px; 
   } 
-   
-  input[type="text"]:focus { 
-    border-color: #007bff; 
-    outline: none; 
-    height: auto; 
+  input[type="number"] { 
+    flex: 1; 
+    padding: 16px; 
+    border-radius: 10px; 
+    border: 1px solid #ddd; 
+    font-size: 18px; /* Увеличиваем размер шрифта */ 
+    transition: all 0.3s ease-in-out; 
+    width: 300px; 
   } 
+   
    
    
   /* button:hover { 
@@ -389,4 +393,21 @@
   .BtnLinkP{
     color: white;
     text-decoration: none;
+  }
+
+
+  @media (max-width: 480px) {
+    .loader-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      width: 100%; /* Заполняем весь экран */
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+    }
   }

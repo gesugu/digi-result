@@ -216,8 +216,14 @@ Please respond professionally and visually format the output in Markdown for a b
       <div className={classes.container}>
         <h1 className={classes.title}>CareerPath AI</h1>
         <div className={classes.chatBox}>
-          {isLoading ? <MyLoader /> : <ChatHistory chatHistory={chatHistory} />}
-        </div>
+  {isLoading ? (
+    <div className={classes["loader-container"]}>
+      <MyLoader />
+    </div>
+  ) : (
+    <ChatHistory chatHistory={chatHistory} />
+  )}
+</div>
         <div className={classes.inputSection}>
           <input
             className={classes.inputField}

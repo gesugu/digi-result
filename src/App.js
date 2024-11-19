@@ -97,11 +97,11 @@ function App() {
         <>
           <h2>Basic Information</h2>
           <p>Name:</p>
-          <input type="text" name="name" placeholder="Name" onChange={handleChange} />
+          <input type="text" className="inputNameSe" name="name" placeholder="Name" onChange={handleChange} />
           <p>Age:</p>
           <input type="number" name="age" placeholder="Age" onChange={handleChange} />
           <p>Education:</p>
-          <select name="education" onChange={handleChange}>
+          <select className="selectApp" name="education" onChange={handleChange}>
             <option value="">Select</option>
             <option value="Incomplete secondary">Incomplete secondary</option>
             <option value="Secondary">Secondary</option>
@@ -145,7 +145,13 @@ function App() {
       )}
       {step === 5 && (
         <>
-          {isLoading ? <MyLoader /> : <button onClick={analyzeAnswers}>Analyze</button>}
+          {isLoading ? (
+  <div className="my-loader-container">
+    <MyLoader />
+  </div>
+) : (
+  <button onClick={analyzeAnswers}>Analyze</button>
+)}
         </>
       )}
       <div className="buttons">
